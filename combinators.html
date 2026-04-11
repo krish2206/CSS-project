@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<HTML>	
+	<HEAD>
+	
+		<style>	
+			section > div > p{
+				color:red;
+			}
+			
+			.type2{
+				color:blue;
+			}
+			
+			.type3 + p{
+				color:green;
+			}
+			
+			.type4 ~ p{
+				color:yellow;
+			}
+			
+			
+			
+		</style>
+	</HEAD>
+	
+	
+	<BODY>
+		<section>
+			<div> 
+				<p>
+					p tag inside div, div inside Section
+				</p>
+			<div>
+			
+			<p>
+				p inside section
+			</p>
+		</section>
+		
+		
+		<section class="type2">
+			<p>	
+				section inside the section tag 
+			<p>
+			<h1>
+				Heading inside the section (type2)
+			</h1>
+			
+		</section>
+		
+		
+		
+		
+		<DIV class="type3">  
+			<p>
+				Performing adjacent Sibling Selectors 
+			</p>
+			
+			
+		
+		</DIV>
+		
+		<p>
+				line 2  Performing adjacent Sibling Selectors
+		</p>
+		
+		
+		<div class="type4">
+			<p>
+				line 1 for ~ 
+			</p>
+			<p>
+				line 2 for ~
+			</p>
+			<p>
+				line 3 for ~
+			</p>
+		</div>
+		
+			<p>
+				line 4 for ~
+			</p>
+	</BODY>
+
+</HTML>
