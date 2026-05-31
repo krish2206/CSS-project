@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<title>	
+			positions in css
+		</title>
+		<style>
+			body{
+				height:900px;
+			}
+			.div{
+				height:300px;
+				width:300px;
+				background-color:red;
+				position:relative;
+				left:50%;
+				top:300px;
+			}
+			.abs{
+				height:100px;
+				width:100px;
+				background-color:yellow;
+				position:fixed;
+				left:50%;
+				top:50%;
+				
+			}
+			.sticky{
+				background-color:brown;
+				color:white;
+				position:sticky;
+				top:0;
+			}
+			
+			/*
+					static - by default
+					relative -     left, right, top, bottom
+					absolute	-  left, right, top, bottom  
+					sticky		-	left, right, top, bottom
+					fixed		-	left, right, top, bottom
+			*/
+		</style>
+	</HEAD>
+	
+	<BODY>
+		<p style="background-color:blue; color:white;">
+			hello 
+		</p>
+		<div class="sticky">
+			i am sticky
+		</div>
+		<div class="div">
+			<div class="abs">
+			
+		</div>
+		</div>
+		
+	</BODY>
+</HTML>

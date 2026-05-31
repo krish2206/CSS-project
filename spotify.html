@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>
+			Spotify
+		</title>
+		
+		<style>
+			body {
+				background-color: rgba(25, 20, 20, 1); 
+			}
+			
+			.Recents:hover{
+				background-color:rgb(179,179,179); border-radius:20px;
+			}
+			
+			.Search:hover{
+				background-color:rgb(179,179,179); border-radius:50%;
+			}
+			.all:hover{
+				background-color:rgb(179,179,179); border-radius:50%;
+			}
+			.lks:hover{
+				background-color:rgb(179,179,179); border-radius:50%;
+			}
+			
+			@media screen and (max-width: 768px) {
+				body { background-color: green; }
+			}
+		</style>
+	
+	</HEAD>
+	
+	<BODY>
+		<nav style="height:50px; width:74%; "> 
+			<div style="padding-top:15px;">
+				<DIV STYLE="margin-top:10px; float:left; margin-left:30px; background-color:white; height:8px; width:8px; border-radius:50%; margin-right:01px;">
+				</DIV>
+				
+				<DIV STYLE="margin-top:10px; float: left; margin-left:10px; background-color:white; height:8px; width:8px; border-radius:50%; ">
+				</DIV>
+				
+				<DIV STYLE="margin-top:10px; float: left; margin-left:10px; background-color:white; height:8px; width:8px; border-radius:50%; ">
+				</DIV>
+			</div>
+			
+			
+			<div style="margin-left:40%;">
+				<div style="float: left; height:40px; width:40px; border-radius:50%; background-color:rgba(179, 179, 179, 1);"> 
+				</div>
+				
+				<div style="float: left; height:30px; width:300px; margin-left: 10px; border-radius:20px; margin-top:04px; background-color:rgba(179, 179, 179, 1);">
+				
+					<div style="margin-left:85%; border-left: 1px solid white; height:70%; margin-bottom:5px; margin-top:5px; "></div>
+				</div>
+				
+				
+				<div style="background-color:rgba(179, 179, 179, 1); height:40px; width:40px; border-radius:50%; float:left; margin-left:40%; box-shadow: 5px 5px 15px grey; overflow:hidden;">
+					<img src="data:image/jpeg;base64,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" style="hieght:100%; width:100%; object-fit:cover;"> 
+				</div>
+			</div>
+		</nav>
+		
+		
+		<section style="clear:both; margin-top:25px;">
+			<div style=" background-color:rgba(33, 33, 33, 1); height:550px; width:20%; border-radius:10px; margin:0.35%; padding-top:10px; float:left; ">				
+				<nav style="height:20px; width:90%; margin:5%;  border-radius:10px;">
+					<div style="color:white; float:left;">Your Library </div>
+					<div style="color:white; float:left; margin-left:85px; padding:2px 6px 2px 16px; background-color:rgba(179, 179, 179, 1); border:1px solid white; border-radius:12px;"> Create </div>
+					<div style="background-color:rgba(179,179,179,1); height:24px; width:20px; float:left; margin-left:15px; border-radius:5px;">   </div>
+					
+				</nav>
+			
+				
+				<div style="">
+					<div style="margin-left:10px;">
+						<button style="background-color:rgba(179,179,179,1); border:1px solid black; border-radius:10px; color:white; padding:4px 16px 4px 16px;"> Playlist</button>
+						<button style="background-color:rgba(179,179,179,1); border:1px solid black; border-radius:10px; color:white; padding:4px 16px 4px 16px;"> Podcast</button>
+						
+					</div>
+					
+					<div style="margin-left:10px; margin-top:20px;" >
+						<div class="Search"style="float: left;  padding:15px; color:white;"></div>
+						<div style="flaot:right; margin-left:220px; padding-top:4px;   color:white;">
+						  <div style="padding-left:10px;" class="Recents"> Recents</div>
+						</div>
+					</div>
+				</div>
+				
+				<div style=" padding:5px; padding-left:0%;  overflow-y:auto; height:400px;">
+					<div style="display: inline-block; height:50px; width:90%; background-color:red; border-radius: 10px; margin:2% 5% 1% 0%;">
+						
+					</div>
+					
+					<div style="display: inline-block; height:50px; width:90%; background-color:red; border-radius: 10px; margin:2% 5% 1% 0%;">
+						
+					</div>
+					
+					<div style="display: inline-block; height:50px; width:90%; background-color:red; border-radius: 10px; margin:2% 5% 1% 0%;">
+						
+					</div>
+					
+					<div style="display: inline-block; height:50px; width:90%; background-color:red; border-radius: 10px; margin:2% 5% 1% 0%;">
+						
+					</div>
+					
+					<div style="display: inline-block; height:50px; width:90%; background-color:red; border-radius: 10px; margin:2% 5% 1% 0%;">
+						
+					</div>
+					
+					<div style="display: inline-block; height:50px; width:90%; background-color:red; border-radius: 10px; margin:2% 5% 1% 0%;">
+						
+					</div>
+					
+					<div style="display: inline-block; height:50px; width:90%; background-color:red; border-radius: 10px; margin:2% 5% 1% 0%;">
+						
+					</div>
+					
+					<div style="display: inline-block; height:50px; width:90%; background-color:red; border-radius: 10px; margin:2% 5% 1% 0%;">
+						
+					</div>
+					
+					<div style="display: inline-block; height:50px; width:90%; background-color:red; border-radius: 10px; margin:2% 5% 1% 0%;">
+						
+					</div>
+				</div>
+			
+			</div>
+			
+			
+			
+			
+			<div style="background: #0F2027;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+				 height:550px; width:75%; margin:0.35%; float:left; border-radius:10px; padding-top:10px; overflow-y:auto;">
+				
+				<div>
+					<div style="height:250px; width:90%; background-color:rgba(179, 179, 179, 1); margin:1% 5% 1% 5%; border-radius:10px;">
+						<div style="height:100%; width:50%; ">
+							<video src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" height="100%" controls loop autoplay> </video>
+						</div>
+					</div>
+				</div>
+				<div style="display:flex; margin:1%;"> 
+				
+					<div class="all" style="height:4%: width:5%;  color:white; padding:5px 8px 5px 8px; border-radius:30%;"> 
+						All
+					</div>
+					
+					<div class="lks"style="height:4%: width:5%; color:white; padding:5px 8px 5px 8px; border-radius:10px; margin-left:30px;"> 
+						Liked Song
+					</div>
+					
+				
+				
+				</div>
+				
+				<div style="margin-left:4%;">
+					<div style="float:left; margin-right:4%; height:50px; width:15%; background-color:rgb(179, 179, 179); border:1px solid white; border-radius:10px;"> 
+						<div style="width:30%; height:50px; border-top-left-radius:10px;  border-bottom-left-radius:10px; background-color:red; margin:0; padding:0px;"> 
+							
+						</div>
+					</div>
+					
+					<div style="float:left; margin-right:4%; height:50px; width:15%; background-color:rgb(179, 179, 179); border:1px solid white; border-radius:10px;"> 
+						<div style="width:30%; height:50px; border-top-left-radius:10px;  border-bottom-left-radius:10px; background-color:red; margin:0; padding:0px;"> 
+							
+						</div>
+					</div>
+					
+					<div style="float:left; margin-right:4%; height:50px; width:15%; background-color:rgb(179, 179, 179); border:1px solid white; border-radius:10px;"> 
+						<div style="width:30%; height:50px; border-top-left-radius:10px;  border-bottom-left-radius:10px; background-color:red; margin:0; padding:0px;"> 
+							
+						</div>
+					</div>
+					
+					<div style="float:left; margin-right:4%; height:50px; width:15%; background-color:rgb(179, 179, 179); border:1px solid white; border-radius:10px;"> 
+						<div style="width:30%; height:50px; border-top-left-radius:10px;  border-bottom-left-radius:10px; background-color:red; margin:0; padding:0px;"> 
+							
+						</div>
+					</div>
+					
+					<div style="float:left; margin-right:4%; height:50px; width:15%; background-color:rgb(179, 179, 179); border:1px solid white; border-radius:10px;"> 
+						<div style="width:30%; height:50px; border-top-left-radius:10px;  border-bottom-left-radius:10px; background-color:red; margin:0; padding:0px;"> 
+							
+						</div>
+					</div>
+					
+					<div style="float:left; margin-right:4%; margin-top:2%; height:50px; width:15%; background-color:rgb(179, 179, 179); border:1px solid white; border-radius:10px;"> 
+						<div style="width:30%; height:50px; border-top-left-radius:10px;  border-bottom-left-radius:10px; background-color:red; margin:0; padding:0px;"> 
+							
+						</div>
+					</div>
+					
+					<div style="float:left; margin-right:4%; margin-top:2%; height:50px; width:15%; background-color:rgb(179, 179, 179); border:1px solid white; border-radius:10px;"> 
+						<div style="width:30%; height:50px; border-top-left-radius:10px;  border-bottom-left-radius:10px; background-color:red; margin:0; padding:0px;"> 
+							
+						</div>
+					</div>
+					
+					<div style="float:left; margin-right:4%; margin-top:2%; height:50px; width:15%; background-color:rgb(179, 179, 179); border:1px solid white; border-radius:10px;"> 
+						<div style="width:30%; height:50px; border-top-left-radius:10px;  border-bottom-left-radius:10px; background-color:red; margin:0; padding:0px;"> 
+							
+						</div>
+					</div>
+					
+					<div style="float:left; margin-right:4%; margin-top:2%; height:50px; width:15%; background-color:rgb(179, 179, 179); border:1px solid white; border-radius:10px;"> 
+						<div style="width:30%; height:50px; border-top-left-radius:10px;  border-bottom-left-radius:10px; background-color:red; margin:0; padding:0px;"> 
+							
+						</div>
+					</div>
+					
+					<div style="float:left; margin-right:4%; margin-top:2%; height:50px; width:15%; background-color:rgb(179, 179, 179); border:1px solid white; border-radius:10px;"> 
+						<div style="width:30%; height:50px; border-top-left-radius:10px;  border-bottom-left-radius:10px; background-color:red; margin:0; padding:0px;"> 
+							
+						</div>
+					</div>
+					
+				</div>
+				
+				<div style="height:700px; width:90%; margin:2% 5% 2% 5%;  clear:both; margin-top:200px;  padding:25px;">
+						<div>
+							<b>Popular Radio</b>
+						</div>
+							
+						<div style="color:white; width:100%;  height:205px; overflow-x:scroll; white-space:nowrap;"> 
+							
+							
+							<div style=" display: inline-block;">
+								<div style=" height:100px; width:100px; border:1px solid black; border-radius:10px; margin-top:25px;">
+									
+								</div>
+								<div style="clear:both;">
+									<p style="font-size:12px; "> Song Name: <br> singer: </p>
+								</div>
+							</div>
+							
+							<div style="margin-left:4%; display: inline-block;">
+								<div style=" height:100px; width:100px; border:1px solid black; border-radius:10px; margin-top:25px;">
+									
+								</div>
+								<div style="clear:both;">
+									<p style="font-size:12px; "> Song Name: <br> singer: </p>
+								</div>
+							</div>
+							
+							<div style=" margin-left:4%; display: inline-block;">
+								<div style=" height:100px; width:100px; border:1px solid black; border-radius:10px; margin-top:25px;">
+									
+								</div>
+								<div style="clear:both;">
+									<p style="font-size:12px; "> Song Name: <br> singer: </p>
+								</div>
+							</div>
+							
+							<div style=" margin-left:4%; display: inline-block;">
+								<div style=" height:100px; width:100px; border:1px solid black; border-radius:10px; margin-top:25px;">
+									
+								</div>
+								<div style="clear:both;">
+									<p style="font-size:12px; "> Song Name: <br> singer: </p>
+								</div>
+							</div>
+							
+							<div style=" margin-left:4%; display: inline-block;">
+								<div style=" height:100px; width:100px; border:1px solid black; border-radius:10px; margin-top:25px;">
+									
+								</div>
+								<div style="clear:both;">
+									<p style="font-size:12px; "> Song Name: <br> singer: </p>
+								</div>
+							</div>
+							
+							
+							<div style=" margin-left:4%; display: inline-block;">
+								<div style=" height:100px; width:100px; border:1px solid black; border-radius:10px; margin-top:25px;">
+									
+								</div>
+								<div style="clear:both;">
+									<p style="font-size:12px; "> Song Name: <br> singer: </p>
+								</div>
+							</div>
+							
+							<div style=" margin-left:4%;display: inline-block;">
+								<div style=" height:100px; width:100px; border:1px solid black; border-radius:10px; margin-top:25px;">
+									
+								</div>
+								<div style="clear:both;">
+									<p style="font-size:12px; "> Song Name: <br> singer: </p>
+								</div>
+							</div>
+							
+							
+							<div style=" margin-left:4%; display: inline-block;">
+								<div style=" height:100px; width:100px; border:1px solid black; border-radius:10px; margin-top:25px;">
+									
+								</div>
+								<div style="clear:both;">
+									<p style="font-size:12px; "> Song Name: <br> singer: </p>
+								</div>
+							</div>
+							
+							
+							<div style=" margin-left:4%;display: inline-block;">
+								<div style=" height:100px; width:100px; border:1px solid black; border-radius:10px; margin-top:25px;">
+									
+								</div>
+								<div style="clear:both;">
+									<p style="font-size:12px; "> Song Name: <br> singer: </p>
+								</div>
+							</div>
+							
+							<div style=" margin-left:4%; display: inline-block;">
+								<div style=" height:100px; width:100px; border:1px solid black; border-radius:10px; margin-top:25px;">
+									
+								</div>
+								<div style="clear:both;">
+									<p style="font-size:12px; "> Song Name: <br> singer: </p>
+								</div>
+							</div>
+
+
+						
+							
+					</div>
+				
+				<div>
+				
+			</div>
+			
+		</section>
+		
+		<footer style="background-color:rgba(18,18,18,1); padding:1%;  height:75px; width:96%; clear:both; margin-left:0.35%; border-radius:10px; background-aatachment:fixed;">
+			<div style="width:35%; height:100%;   float:left;">
+				<Div style="float:left; height:50px; width:50px; border:1px solid white; border-radius:5px; background-color:green;">
+					
+				</Div>
+				
+				
+				<Div style="color:white; float:left; margin:2%;">
+					Song<br>
+					Singer
+				</Div>
+				
+				
+			</div>
+			
+			
+			<Div style="float:left; margin-left:5%;">	
+				<audio style="background-color:black;" src="" type="audio/mp3" controls > </audio>
+			
+			
+			</Div>
+		</footer>
+		
+	</BODY>
+
+</HTML>

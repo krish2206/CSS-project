@@ -1,0 +1,17 @@
+.navbar{
+	margin-left:10%;
+	margin-right:10%;
+	background-color:red;
+	padding-left:25px;
+	box-sizing:content-box;
+	height:81px;
+	width: 80%;
+	border:1px solid black;
+	display:flex;
+	flex-direction: column;
+}
+
+.navbarcontent{
+	margin-top:40px;
+	
+}
